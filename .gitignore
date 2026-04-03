@@ -5,9 +5,10 @@ data/
 *.csv
 !data/.gitkeep
 
-# Allow dashboard mock data (no sensitive info)
+# Allow dashboard data (schools + hazard overlays)
 !dashboard/data/
 !dashboard/data/*.geojson
+!dashboard/data/*.png
 
 # Python
 __pycache__/

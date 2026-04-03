@@ -663,7 +663,7 @@
 
     <!-- Hazard toggles -->
     <div class="sidebar-section">
-      <div class="section-title">Hazard Layers</div>
+      <div class="section-title">Score Filters</div>
 
       <label class="hazard-toggle">
         <input type="checkbox" checked data-hazard="flood" onchange="updateDisplay()">
@@ -711,6 +711,30 @@
     <!-- Map overlays -->
     <div class="sidebar-section">
       <div class="section-title">Map Overlays</div>
+
+      <div class="overlay-toggle">
+        <span class="overlay-toggle-label">Heat stress (WB WBGT)</span>
+        <label class="overlay-slider">
+          <input type="checkbox" id="toggleHeat" onchange="toggleOverlay('heat-hazard', this.checked)">
+          <span class="slider-track"></span>
+        </label>
+      </div>
+      <div class="overlay-opacity" id="heat-hazardOpacity" style="display:none;">
+        <span>Opacity</span>
+        <input type="range" min="10" max="90" value="50" oninput="setOverlayOpacity('heat-hazard', this.value / 100)">
+      </div>
+
+      <div class="overlay-toggle">
+        <span class="overlay-toggle-label">Landslide (WB/GFDRR)</span>
+        <label class="overlay-slider">
+          <input type="checkbox" id="toggleLandslide" onchange="toggleOverlay('landslide-hazard', this.checked)">
+          <span class="slider-track"></span>
+        </label>
+      </div>
+      <div class="overlay-opacity" id="landslide-hazardOpacity" style="display:none;">
+        <span>Opacity</span>
+        <input type="range" min="10" max="90" value="50" oninput="setOverlayOpacity('landslide-hazard', this.value / 100)">
+      </div>
 
       <div class="overlay-toggle">
         <span class="overlay-toggle-label">Seismic hazard (GEM)</span>
@@ -875,6 +899,16 @@ const OVERLAY_SOURCES = {
     tiles: ['https://maps.openquake.org/mapproxy/ghm/wmts/seismic-hazard-pga-g/webmercator/{z}/{x}/{y}.png'],
     tileSize: 256,
     attribution: 'GEM Global Seismic Hazard Map (CC BY-SA 4.0)'
+  },
+  'landslide-hazard': {
+    type: 'image',
+    url: 'data/landslide_westafrica.png',
+    coordinates: [[-5, 25], [20, 25], [20, 5], [-5, 5]]
+  },
+  'heat-hazard': {
+    type: 'image',
+    url: 'data/heat_westafrica.png',
+    coordinates: [[-5, 25], [20, 25], [20, 5], [-5, 5]]
   }
 };
 
@@ -901,15 +935,21 @@ async function init() {
   map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
 
   map.on('load', async () => {
-    // Pre-register overlay sources and layers (hidden by default)
-    map.addSource('seismic', OVERLAY_SOURCES.seismic);
-    map.addLayer({
-      id: 'seismic-layer',
-      type: 'raster',
-      source: 'seismic',
-      paint: { 'raster-opacity': 0 },
-      layout: { visibility: 'none' }
-    });
+    // Pre-register all overlay sources and layers (hidden by default)
+    for (const [id, source] of Object.entries(OVERLAY_SOURCES)) {
+      try {
+        map.addSource(id, source);
+        map.addLayer({
+          id: `${id}-layer`,
+          type: 'raster',
+          source: id,
+          paint: { 'raster-opacity': 0 },
+          layout: { visibility: 'none' }
+        });
+      } catch (e) {
+        console.warn(`Could not load overlay ${id}:`, e.message);
+      }
+    }
 
     await loadSchoolData('niger');
     document.getElementById('loadingOverlay').classList.add('hidden');
