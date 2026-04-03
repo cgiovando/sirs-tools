@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRS Screener - School Infrastructure Resilience Scan</title>
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --sidebar-width: 280px;
+      --header-height: 56px;
+      --panel-height: 260px;
+      --score-0: #2d8c3c;
+      --score-1: #7ec87e;
+      --score-2: #f5e642;
+      --score-3: #f5a623;
+      --score-4: #e85d3a;
+      --score-5: #c0392b;
+      --bg-dark: #1a1f2e;
+      --bg-panel: #232839;
+      --bg-card: #2a3045;
+      --text-primary: #e8ecf4;
+      --text-secondary: #9ca3b8;
+      --border-color: #363d54;
+      --accent: #4a90d9;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      height: var(--header-height);
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title span {
+      color: var(--accent);
+    }
+
+    .header-subtitle {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 1px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .country-select {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 10px;
+      background: rgba(74, 144, 217, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(74, 144, 217, 0.3);
+    }
+
+    /* Layout */
+    .main-container {
+      display: flex;
+      height: calc(100vh - var(--header-height));
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--bg-panel);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .sidebar-section {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-section:last-child {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    /* Hazard toggles */
+    .hazard-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-bottom: 4px;
+    }
+
+    .hazard-toggle:hover {
+      background: var(--bg-card);
+    }
+
+    .hazard-toggle input[type="checkbox"] {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .hazard-toggle input[type="checkbox"]:checked {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .hazard-toggle input[type="checkbox"]:checked::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 0px;
+      width: 5px;
+      height: 9px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .hazard-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .hazard-label {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .hazard-count {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-left: auto;
+    }
+
+    /* Display mode */
+    .display-mode {
+      display: flex;
+      gap: 4px;
+      background: var(--bg-dark);
+      border-radius: 6px;
+      padding: 3px;
+    }
+
+    .mode-btn {
+      flex: 1;
+      padding: 6px 8px;
+      border: none;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+    }
+
+    .mode-btn.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Legend */
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      font-size: 13px;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .legend-label {
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    /* Stats */
+    .stat-card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .stat-row .stat-card {
+      flex: 1;
+    }
+
+    /* Map container */
+    .map-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    #map {
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* Bottom panel */
+    .bottom-panel {
+      height: var(--panel-height);
+      background: var(--bg-panel);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-shrink: 0;
+      transition: height 0.3s ease;
+      overflow: hidden;
+    }
+
+    .bottom-panel.collapsed {
+      height: 36px;
+    }
+
+    .panel-toggle {
+      position: absolute;
+      top: -28px;
+      right: 16px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-bottom: none;
+      border-radius: 6px 6px 0 0;
+      padding: 4px 12px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 5;
+    }
+
+    .panel-section {
+      flex: 1;
+      padding: 16px;
+      min-width: 0;
+      position: relative;
+    }
+
+    .panel-section + .panel-section {
+      border-left: 1px solid var(--border-color);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .panel-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+    }
+
+    .bottom-toggle-bar {
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-secondary);
+      font-size: 12px;
+      gap: 6px;
+      border-top: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
+
+    .bottom-toggle-bar:hover {
+      background: var(--bg-card);
+    }
+
+    .bottom-content {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* Chart area */
+    .chart-container {
+      width: 100%;
+      height: calc(var(--panel-height) - 70px);
+    }
+
+    /* Summary table */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .summary-table th {
+      text-align: left;
+      padding: 6px 8px;
+      color: var(--text-secondary);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    .summary-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid rgba(54, 61, 84, 0.5);
+      white-space: nowrap;
+    }
+
+    .summary-table tr:hover td {
+      background: rgba(74, 144, 217, 0.05);
+    }
+
+    .score-cell {
+      text-align: center;
+      font-weight: 600;
+      font-size: 11px;
+      min-width: 32px;
+    }
+
+    /* Popup styles */
+    .maplibregl-popup-content {
+      background: var(--bg-panel) !important;
+      color: var(--text-primary) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 10px !important;
+      padding: 0 !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
+      min-width: 240px;
+    }
+
+    .maplibregl-popup-tip {
+      border-top-color: var(--bg-panel) !important;
+    }
+
+    .maplibregl-popup-close-button {
+      color: var(--text-secondary) !important;
+      font-size: 18px !important;
+      padding: 4px 8px !important;
+    }
+
+    .popup-header {
+      padding: 12px 14px 8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .popup-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .popup-region {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .popup-scores {
+      padding: 10px 14px;
+    }
+
+    .popup-score-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 0;
+    }
+
+    .popup-hazard-name {
+      font-size: 12px;
+      width: 80px;
+      color: var(--text-secondary);
+    }
+
+    .popup-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: var(--bg-dark);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .popup-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+
+    .popup-score-val {
+      font-size: 12px;
+      font-weight: 600;
+      width: 18px;
+      text-align: right;
+    }
+
+    .popup-footer {
+      padding: 8px 14px 12px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .popup-max-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .popup-max-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    /* Loading state */
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      transition: opacity 0.3s;
+    }
+
+    .loading-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .bottom-panel { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div>
+      <div class="header-title"><span>SIRS</span> Screener</div>
+      <div class="header-subtitle">School Infrastructure Resilience Scan</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <select class="country-select" id="countrySelect">
+      <option value="niger" selected>Niger</option>
+      <option value="guinea" disabled>Guinea (coming soon)</option>
+      <option value="mali" disabled>Mali (coming soon)</option>
+      <option value="benin" disabled>Benin (coming soon)</option>
+      <option value="ghana" disabled>Ghana (coming soon)</option>
+      <option value="timor-leste" disabled>Timor-Leste (coming soon)</option>
+    </select>
+    <span class="badge">PROTOTYPE</span>
+  </div>
+</div>
+
+<!-- Main layout -->
+<div class="main-container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <!-- Display mode -->
+    <div class="sidebar-section">
+      <div class="section-title">Display Mode</div>
+      <div class="display-mode">
+        <button class="mode-btn active" data-mode="max" onclick="setDisplayMode('max')">Max Score</button>
+        <button class="mode-btn" data-mode="single" onclick="setDisplayMode('single')">By Hazard</button>
+      </div>
+      <div id="hazardSelector" style="margin-top: 10px; display: none;">
+        <select class="country-select" id="singleHazardSelect" style="width: 100%;" onchange="updateDisplay()">
+          <option value="flood">Flood</option>
+          <option value="heat">Heat</option>
+          <option value="wind">Wind</option>
+          <option value="drought">Drought</option>
+          <option value="landslide">Landslide</option>
+          <option value="earthquake">Earthquake</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Hazard toggles -->
+    <div class="sidebar-section">
+      <div class="section-title">Hazard Layers</div>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="flood" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(66,133,244,0.15); color: #4285f4;">~</div>
+        <span class="hazard-label">Flood</span>
+        <span class="hazard-count" id="count-flood"></span>
+      </label>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="heat" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(234,67,53,0.15); color: #ea4335;">H</div>
+        <span class="hazard-label">Heat</span>
+        <span class="hazard-count" id="count-heat"></span>
+      </label>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="wind" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(120,170,210,0.15); color: #78aad2;">W</div>
+        <span class="hazard-label">Wind</span>
+        <span class="hazard-count" id="count-wind"></span>
+      </label>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="drought" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(205,160,80,0.15); color: #cda050;">D</div>
+        <span class="hazard-label">Drought</span>
+        <span class="hazard-count" id="count-drought"></span>
+      </label>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="landslide" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(140,100,70,0.15); color: #8c6446;">L</div>
+        <span class="hazard-label">Landslide</span>
+        <span class="hazard-count" id="count-landslide"></span>
+      </label>
+
+      <label class="hazard-toggle">
+        <input type="checkbox" checked data-hazard="earthquake" onchange="updateDisplay()">
+        <div class="hazard-icon" style="background: rgba(156,39,176,0.15); color: #9c27b0;">E</div>
+        <span class="hazard-label">Earthquake</span>
+        <span class="hazard-count" id="count-earthquake"></span>
+      </label>
+    </div>
+
+    <!-- Legend -->
+    <div class="sidebar-section">
+      <div class="section-title">Susceptibility Score</div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-0);"></div>
+        <span>0</span>
+        <span class="legend-label">No exposure</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-1);"></div>
+        <span>1</span>
+        <span class="legend-label">Very low</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-2);"></div>
+        <span>2</span>
+        <span class="legend-label">Low</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-3);"></div>
+        <span>3</span>
+        <span class="legend-label">Medium</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-4);"></div>
+        <span>4</span>
+        <span class="legend-label">High</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: var(--score-5);"></div>
+        <span>5</span>
+        <span class="legend-label">Very high</span>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="sidebar-section">
+      <div class="section-title">Summary</div>
+      <div class="stat-card">
+        <div class="stat-value" id="totalSchools">-</div>
+        <div class="stat-label">Total schools</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-value" id="atRiskCount" style="color: var(--score-4);">-</div>
+          <div class="stat-label">High / Very high</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="atRiskPct" style="color: var(--score-4);">-</div>
+          <div class="stat-label">% at risk</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credits -->
+    <div class="sidebar-section" style="margin-top: auto;">
+      <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.5;">
+        <strong>GPSS / GFDRR</strong><br>
+        Safer Schools Program<br>
+        World Bank Group
+      </div>
+      <div style="font-size: 10px; color: var(--text-secondary); margin-top: 8px; opacity: 0.6;">
+        Prototype - Mock data for demonstration only
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Map + Bottom panel -->
+  <div class="map-panel">
+    <div id="map" style="position: relative;">
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+
+    <!-- Bottom panel -->
+    <div class="bottom-panel" id="bottomPanel">
+      <div class="bottom-toggle-bar" onclick="toggleBottomPanel()">
+        <span id="toggleIcon">&#9660;</span>
+        <span>Summary Statistics</span>
+      </div>
+      <div class="bottom-content">
+        <!-- Chart -->
+        <div class="panel-section" style="flex: 1.2;">
+          <div class="panel-header">
+            <span class="panel-title">Score Distribution by Hazard</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="summaryChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="panel-section" style="flex: 1; overflow-x: auto;">
+          <div class="panel-header">
+            <span class="panel-title">School Counts by Score</span>
+          </div>
+          <table class="summary-table" id="summaryTable">
+            <thead>
+              <tr>
+                <th>Hazard</th>
+                <th class="score-cell" style="color: var(--score-0);">0</th>
+                <th class="score-cell" style="color: var(--score-1);">1</th>
+                <th class="score-cell" style="color: var(--score-2);">2</th>
+                <th class="score-cell" style="color: var(--score-3);">3</th>
+                <th class="score-cell" style="color: var(--score-4);">4</th>
+                <th class="score-cell" style="color: var(--score-5);">5</th>
+                <th class="score-cell">Total</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ---- Configuration ----
+const HAZARDS = [
+  { id: 'flood', label: 'Flood', color: '#4285f4' },
+  { id: 'heat', label: 'Heat', color: '#ea4335' },
+  { id: 'wind', label: 'Wind', color: '#78aad2' },
+  { id: 'drought', label: 'Drought', color: '#cda050' },
+  { id: 'landslide', label: 'Landslide', color: '#8c6446' },
+  { id: 'earthquake', label: 'Earthquake', color: '#9c27b0' },
+];
+
+const SCORE_COLORS = ['#2d8c3c', '#7ec87e', '#f5e642', '#f5a623', '#e85d3a', '#c0392b'];
+const SCORE_LABELS = ['No exposure', 'Very low', 'Low', 'Medium', 'High', 'Very high'];
+
+const COUNTRY_CONFIG = {
+  niger: {
+    center: [7.5, 14.5],
+    zoom: 5.5,
+    dataUrl: 'data/niger-schools.geojson'
+  }
+};
+
+// ---- State ----
+let schoolsData = null;
+let map = null;
+let summaryChart = null;
+let displayMode = 'max';
+let bottomPanelOpen = true;
+
+// ---- Initialization ----
+async function init() {
+  map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+    center: COUNTRY_CONFIG.niger.center,
+    zoom: COUNTRY_CONFIG.niger.zoom,
+    attributionControl: false
+  });
+
+  map.addControl(new maplibregl.NavigationControl(), 'top-right');
+  map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
+
+  map.on('load', async () => {
+    await loadSchoolData('niger');
+    document.getElementById('loadingOverlay').classList.add('hidden');
+  });
+}
+
+async function loadSchoolData(country) {
+  const config = COUNTRY_CONFIG[country];
+  const response = await fetch(config.dataUrl);
+  schoolsData = await response.json();
+
+  // Add source
+  if (map.getSource('schools')) {
+    map.getSource('schools').setData(schoolsData);
+  } else {
+    map.addSource('schools', {
+      type: 'geojson',
+      data: schoolsData
+    });
+
+    // Halo/outline layer
+    map.addLayer({
+      id: 'schools-halo',
+      type: 'circle',
+      source: 'schools',
+      paint: {
+        'circle-radius': 7,
+        'circle-color': 'rgba(0,0,0,0.3)',
+        'circle-blur': 0.5
+      }
+    });
+
+    // Main school points layer
+    map.addLayer({
+      id: 'schools-layer',
+      type: 'circle',
+      source: 'schools',
+      paint: {
+        'circle-radius': [
+          'interpolate', ['linear'], ['zoom'],
+          4, 3,
+          7, 5,
+          10, 8
+        ],
+        'circle-color': getColorExpression(),
+        'circle-stroke-width': 1,
+        'circle-stroke-color': 'rgba(255,255,255,0.3)',
+        'circle-opacity': 0.9
+      }
+    });
+
+    // Click handler
+    map.on('click', 'schools-layer', (e) => {
+      const feature = e.features[0];
+      showPopup(feature);
+    });
+
+    // Cursor
+    map.on('mouseenter', 'schools-layer', () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', 'schools-layer', () => {
+      map.getCanvas().style.cursor = '';
+    });
+  }
+
+  // Fly to country
+  map.flyTo({ center: config.center, zoom: config.zoom });
+
+  // Update everything
+  updateDisplay();
+}
+
+// ---- Color expression ----
+function getColorExpression() {
+  if (displayMode === 'max') {
+    const selectedHazards = getSelectedHazards();
+    if (selectedHazards.length === 0) {
+      return '#666';
+    }
+    // Use data-driven expression for max score across selected hazards
+    // We calculate it by setting a property, so we recalculate the data
+    return [
+      'match', ['get', '_display_score'],
+      0, SCORE_COLORS[0],
+      1, SCORE_COLORS[1],
+      2, SCORE_COLORS[2],
+      3, SCORE_COLORS[3],
+      4, SCORE_COLORS[4],
+      5, SCORE_COLORS[5],
+      '#666'
+    ];
+  } else {
+    const hazard = document.getElementById('singleHazardSelect').value;
+    return [
+      'match', ['get', `${hazard}_score`],
+      0, SCORE_COLORS[0],
+      1, SCORE_COLORS[1],
+      2, SCORE_COLORS[2],
+      3, SCORE_COLORS[3],
+      4, SCORE_COLORS[4],
+      5, SCORE_COLORS[5],
+      '#666'
+    ];
+  }
+}
+
+function getSelectedHazards() {
+  const checkboxes = document.querySelectorAll('.hazard-toggle input[type="checkbox"]');
+  const selected = [];
+  checkboxes.forEach(cb => {
+    if (cb.checked) selected.push(cb.dataset.hazard);
+  });
+  return selected;
+}
+
+// ---- Update display ----
+function updateDisplay() {
+  if (!schoolsData) return;
+
+  const selectedHazards = getSelectedHazards();
+
+  // Recalculate display scores
+  schoolsData.features.forEach(f => {
+    if (displayMode === 'max') {
+      if (selectedHazards.length === 0) {
+        f.properties._display_score = -1;
+      } else {
+        f.properties._display_score = Math.max(
+          ...selectedHazards.map(h => f.properties[`${h}_score`])
+        );
+      }
+    } else {
+      const hazard = document.getElementById('singleHazardSelect').value;
+      f.properties._display_score = f.properties[`${hazard}_score`];
+    }
+  });
+
+  // Update map source
+  if (map.getSource('schools')) {
+    map.getSource('schools').setData(schoolsData);
+    map.setPaintProperty('schools-layer', 'circle-color', getColorExpression());
+  }
+
+  // Update stats
+  updateStats(selectedHazards);
+
+  // Update chart
+  updateChart(selectedHazards);
+
+  // Update table
+  updateTable(selectedHazards);
+
+  // Update hazard counts
+  updateHazardCounts();
+}
+
+function updateStats(selectedHazards) {
+  const total = schoolsData.features.length;
+  document.getElementById('totalSchools').textContent = total;
+
+  let atRisk = 0;
+  schoolsData.features.forEach(f => {
+    const score = f.properties._display_score;
+    if (score >= 4) atRisk++;
+  });
+
+  document.getElementById('atRiskCount').textContent = atRisk;
+  document.getElementById('atRiskPct').textContent = Math.round((atRisk / total) * 100) + '%';
+}
+
+function updateHazardCounts() {
+  HAZARDS.forEach(h => {
+    let exposed = 0;
+    schoolsData.features.forEach(f => {
+      if (f.properties[`${h.id}_score`] >= 3) exposed++;
+    });
+    const el = document.getElementById(`count-${h.id}`);
+    if (el) el.textContent = exposed;
+  });
+}
+
+// ---- Chart ----
+function updateChart(selectedHazards) {
+  const ctx = document.getElementById('summaryChart').getContext('2d');
+
+  // Build datasets: one per score level (0-5), each with values for every hazard
+  const hazardsToShow = displayMode === 'max' ? selectedHazards : HAZARDS.map(h => h.id);
+  const labels = hazardsToShow.map(id => HAZARDS.find(h => h.id === id)?.label || id);
+
+  const datasets = [];
+  for (let score = 0; score <= 5; score++) {
+    const data = hazardsToShow.map(hazardId => {
+      let count = 0;
+      schoolsData.features.forEach(f => {
+        if (f.properties[`${hazardId}_score`] === score) count++;
+      });
+      return count;
+    });
+
+    datasets.push({
+      label: `${score} - ${SCORE_LABELS[score]}`,
+      data: data,
+      backgroundColor: SCORE_COLORS[score],
+      borderRadius: 2,
+    });
+  }
+
+  if (summaryChart) {
+    summaryChart.destroy();
+  }
+
+  summaryChart = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'right',
+          labels: {
+            boxWidth: 12,
+            padding: 8,
+            font: { size: 10 },
+            color: '#9ca3b8'
+          }
+        },
+        tooltip: {
+          callbacks: {
+            title: (items) => items[0].label,
+            label: (item) => `  Score ${item.datasetIndex}: ${item.raw} schools`
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { color: '#9ca3b8', font: { size: 11 } }
+        },
+        y: {
+          stacked: true,
+          grid: { color: 'rgba(54,61,84,0.5)' },
+          ticks: { color: '#9ca3b8', font: { size: 11 } },
+          title: {
+            display: true,
+            text: 'Number of schools',
+            color: '#9ca3b8',
+            font: { size: 11 }
+          }
+        }
+      }
+    }
+  });
+}
+
+// ---- Table ----
+function updateTable(selectedHazards) {
+  const tbody = document.getElementById('tableBody');
+  const hazardsToShow = displayMode === 'max' ? selectedHazards : HAZARDS.map(h => h.id);
+
+  let html = '';
+  hazardsToShow.forEach(hazardId => {
+    const label = HAZARDS.find(h => h.id === hazardId)?.label || hazardId;
+    const counts = [0, 0, 0, 0, 0, 0];
+    schoolsData.features.forEach(f => {
+      const score = f.properties[`${hazardId}_score`];
+      counts[score]++;
+    });
+    const total = counts.reduce((a, b) => a + b, 0);
+
+    html += `<tr>`;
+    html += `<td style="font-weight: 500;">${label}</td>`;
+    for (let i = 0; i <= 5; i++) {
+      const pct = Math.round((counts[i] / total) * 100);
+      const bg = counts[i] > 0 ? SCORE_COLORS[i] + '22' : 'transparent';
+      html += `<td class="score-cell" style="background: ${bg}; color: ${SCORE_COLORS[i]};">${counts[i]}</td>`;
+    }
+    html += `<td class="score-cell" style="color: var(--text-secondary);">${total}</td>`;
+    html += `</tr>`;
+  });
+
+  tbody.innerHTML = html;
+}
+
+// ---- Popup ----
+function showPopup(feature) {
+  const props = feature.properties;
+  const coords = feature.geometry.coordinates.slice();
+
+  let scoresHtml = '';
+  HAZARDS.forEach(h => {
+    const score = props[`${h.id}_score`];
+    const pct = (score / 5) * 100;
+    const color = SCORE_COLORS[score];
+    scoresHtml += `
+      <div class="popup-score-row">
+        <span class="popup-hazard-name">${h.label}</span>
+        <div class="popup-bar-bg">
+          <div class="popup-bar-fill" style="width: ${pct}%; background: ${color};"></div>
+        </div>
+        <span class="popup-score-val" style="color: ${color};">${score}</span>
+      </div>
+    `;
+  });
+
+  const maxScore = props.max_score;
+  const maxColor = SCORE_COLORS[maxScore];
+
+  const html = `
+    <div class="popup-header">
+      <div class="popup-name">${props.name}</div>
+      <div class="popup-region">${props.region} Region - ${props.id}</div>
+    </div>
+    <div class="popup-scores">
+      ${scoresHtml}
+    </div>
+    <div class="popup-footer">
+      <span class="popup-max-label">Max susceptibility</span>
+      <span class="popup-max-badge" style="background: ${maxColor};">${maxScore} - ${SCORE_LABELS[maxScore]}</span>
+    </div>
+  `;
+
+  new maplibregl.Popup({ offset: 12, maxWidth: '280px' })
+    .setLngLat(coords)
+    .setHTML(html)
+    .addTo(map);
+}
+
+// ---- UI Controls ----
+function setDisplayMode(mode) {
+  displayMode = mode;
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === mode);
+  });
+  document.getElementById('hazardSelector').style.display = mode === 'single' ? 'block' : 'none';
+  updateDisplay();
+}
+
+function toggleBottomPanel() {
+  const panel = document.getElementById('bottomPanel');
+  const icon = document.getElementById('toggleIcon');
+  bottomPanelOpen = !bottomPanelOpen;
+  panel.classList.toggle('collapsed', !bottomPanelOpen);
+  icon.innerHTML = bottomPanelOpen ? '&#9660;' : '&#9650;';
+
+  // Resize map
+  setTimeout(() => map.resize(), 350);
+}
+
+// ---- Start ----
+init();
+</script>
+
+</body>
+</html>

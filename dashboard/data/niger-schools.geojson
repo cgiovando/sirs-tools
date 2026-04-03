@@ -1,0 +1,5725 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.05957,
+          13.46764
+        ]
+      },
+      "properties": {
+        "id": "NER-0001",
+        "name": "Lycee de Saga I",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.57034,
+          13.2727
+        ]
+      },
+      "properties": {
+        "id": "NER-0002",
+        "name": "Ecole Primaire de Boukoki",
+        "region": "Niamey",
+        "flood_score": 5,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.78947,
+          13.72462
+        ]
+      },
+      "properties": {
+        "id": "NER-0003",
+        "name": "Medersa de Route Filingue",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.78979,
+          13.79795
+        ]
+      },
+      "properties": {
+        "id": "NER-0004",
+        "name": "Ecole Franco-Arabe de Gamkalle",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.99954,
+          13.68729
+        ]
+      },
+      "properties": {
+        "id": "NER-0005",
+        "name": "CEG de Gaweye",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3424,
+          14.34345
+        ]
+      },
+      "properties": {
+        "id": "NER-0006",
+        "name": "Complexe Scolaire de Aeroport I",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.65715,
+          13.84575
+        ]
+      },
+      "properties": {
+        "id": "NER-0007",
+        "name": "Medersa de Lamorde",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 5,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.87717,
+          13.50215
+        ]
+      },
+      "properties": {
+        "id": "NER-0008",
+        "name": "Lycee de Boukoki",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 4,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.45672,
+          13.65488
+        ]
+      },
+      "properties": {
+        "id": "NER-0009",
+        "name": "Ecole Primaire de Bani Fandou",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.88888,
+          13.2973
+        ]
+      },
+      "properties": {
+        "id": "NER-0010",
+        "name": "Complexe Scolaire de Francophone II",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.67612,
+          13.53791
+        ]
+      },
+      "properties": {
+        "id": "NER-0011",
+        "name": "Ecole Franco-Arabe de Gaweye",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.02423,
+          13.07415
+        ]
+      },
+      "properties": {
+        "id": "NER-0012",
+        "name": "Ecole Primaire de Saga B",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 4,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.71869,
+          13.29749
+        ]
+      },
+      "properties": {
+        "id": "NER-0013",
+        "name": "CEG de Cite Faysal",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 5,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.06997,
+          13.3707
+        ]
+      },
+      "properties": {
+        "id": "NER-0014",
+        "name": "Lycee de Dar es Salam",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.99394,
+          13.35003
+        ]
+      },
+      "properties": {
+        "id": "NER-0015",
+        "name": "Ecole Primaire de Gaweye B",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.84982,
+          13.26239
+        ]
+      },
+      "properties": {
+        "id": "NER-0016",
+        "name": "Ecole Primaire de Francophone",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.74169,
+          13.46498
+        ]
+      },
+      "properties": {
+        "id": "NER-0017",
+        "name": "Complexe Scolaire de Plateau",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.36022,
+          13.27797
+        ]
+      },
+      "properties": {
+        "id": "NER-0018",
+        "name": "Lycee de Yantala A",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.16619,
+          13.56346
+        ]
+      },
+      "properties": {
+        "id": "NER-0019",
+        "name": "Lycee de Gaweye",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6845,
+          13.44329
+        ]
+      },
+      "properties": {
+        "id": "NER-0020",
+        "name": "CEG de Boukoki",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.59072,
+          13.16129
+        ]
+      },
+      "properties": {
+        "id": "NER-0021",
+        "name": "CEG de Dar es Salam",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.54083,
+          13.47411
+        ]
+      },
+      "properties": {
+        "id": "NER-0022",
+        "name": "Ecole Primaire de Koira Kano",
+        "region": "Niamey",
+        "flood_score": 5,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.47014,
+          13.58219
+        ]
+      },
+      "properties": {
+        "id": "NER-0023",
+        "name": "Complexe Scolaire de Bani Fandou",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.86081,
+          13.84615
+        ]
+      },
+      "properties": {
+        "id": "NER-0024",
+        "name": "Complexe Scolaire de Lazaret A",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.19959,
+          13.7802
+        ]
+      },
+      "properties": {
+        "id": "NER-0025",
+        "name": "Medersa de Boukoki",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 5,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.15473,
+          13.24171
+        ]
+      },
+      "properties": {
+        "id": "NER-0026",
+        "name": "Ecole Franco-Arabe de Gaweye A",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.11342,
+          13.98584
+        ]
+      },
+      "properties": {
+        "id": "NER-0027",
+        "name": "Ecole Communautaire de Lazaret",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.84231,
+          13.54007
+        ]
+      },
+      "properties": {
+        "id": "NER-0028",
+        "name": "CEG de Lamorde",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.43938,
+          13.60845
+        ]
+      },
+      "properties": {
+        "id": "NER-0029",
+        "name": "Complexe Scolaire de Francophone",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.45925,
+          13.43635
+        ]
+      },
+      "properties": {
+        "id": "NER-0030",
+        "name": "Ecole Franco-Arabe de Bani Fandou",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 5,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.50072,
+          13.32893
+        ]
+      },
+      "properties": {
+        "id": "NER-0031",
+        "name": "Ecole Franco-Arabe de Plateau A",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.54259,
+          13.54706
+        ]
+      },
+      "properties": {
+        "id": "NER-0032",
+        "name": "Lycee de Saga",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 4,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13248,
+          13.36235
+        ]
+      },
+      "properties": {
+        "id": "NER-0033",
+        "name": "Complexe Scolaire de Koira Kano",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0134,
+          13.31374
+        ]
+      },
+      "properties": {
+        "id": "NER-0034",
+        "name": "Ecole Franco-Arabe de Route Filingue",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4117,
+          13.33878
+        ]
+      },
+      "properties": {
+        "id": "NER-0035",
+        "name": "CEG de Cite Faysal B",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.12508,
+          13.7837
+        ]
+      },
+      "properties": {
+        "id": "NER-0036",
+        "name": "Complexe Scolaire de Balafon",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.7393,
+          13.68296
+        ]
+      },
+      "properties": {
+        "id": "NER-0037",
+        "name": "CEG de Aeroport",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.02878,
+          13.32372
+        ]
+      },
+      "properties": {
+        "id": "NER-0038",
+        "name": "Lycee de Saga II",
+        "region": "Niamey",
+        "flood_score": 5,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 5,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.01512,
+          13.73211
+        ]
+      },
+      "properties": {
+        "id": "NER-0039",
+        "name": "Lycee de Plateau",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.37076,
+          13.4698
+        ]
+      },
+      "properties": {
+        "id": "NER-0040",
+        "name": "Medersa de Aeroport I",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.17476,
+          13.80445
+        ]
+      },
+      "properties": {
+        "id": "NER-0041",
+        "name": "Ecole Communautaire de Francophone B",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.49295,
+          13.51451
+        ]
+      },
+      "properties": {
+        "id": "NER-0042",
+        "name": "Complexe Scolaire de Aeroport II",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.27307,
+          13.66503
+        ]
+      },
+      "properties": {
+        "id": "NER-0043",
+        "name": "CEG de Gamkalle III",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0638,
+          13.17823
+        ]
+      },
+      "properties": {
+        "id": "NER-0044",
+        "name": "Ecole Primaire de Gamkalle B",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 5,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.47246,
+          12.91597
+        ]
+      },
+      "properties": {
+        "id": "NER-0045",
+        "name": "Ecole Communautaire de Wadata",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.20888,
+          13.02469
+        ]
+      },
+      "properties": {
+        "id": "NER-0046",
+        "name": "Medersa de Plateau",
+        "region": "Niamey",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.79046,
+          13.96539
+        ]
+      },
+      "properties": {
+        "id": "NER-0047",
+        "name": "Complexe Scolaire de Saga",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 4,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.76358,
+          13.6524
+        ]
+      },
+      "properties": {
+        "id": "NER-0048",
+        "name": "Ecole Communautaire de Saga",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.00998,
+          13.04824
+        ]
+      },
+      "properties": {
+        "id": "NER-0049",
+        "name": "Complexe Scolaire de Aeroport",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.94545,
+          13.76224
+        ]
+      },
+      "properties": {
+        "id": "NER-0050",
+        "name": "Medersa de Balafon",
+        "region": "Niamey",
+        "flood_score": 5,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.04806,
+          13.26209
+        ]
+      },
+      "properties": {
+        "id": "NER-0051",
+        "name": "Ecole Franco-Arabe de Lazaret III",
+        "region": "Niamey",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.55935,
+          13.65422
+        ]
+      },
+      "properties": {
+        "id": "NER-0052",
+        "name": "Lycee de Saga",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.66647,
+          13.44841
+        ]
+      },
+      "properties": {
+        "id": "NER-0053",
+        "name": "Medersa de Boukoki I",
+        "region": "Niamey",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.97872,
+          13.4823
+        ]
+      },
+      "properties": {
+        "id": "NER-0054",
+        "name": "Lycee de Gaweye A",
+        "region": "Niamey",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 3,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0746,
+          13.52902
+        ]
+      },
+      "properties": {
+        "id": "NER-0055",
+        "name": "Medersa de Yantala",
+        "region": "Niamey",
+        "flood_score": 4,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.09808,
+          13.89589
+        ]
+      },
+      "properties": {
+        "id": "NER-0056",
+        "name": "Ecole Franco-Arabe de Kantche A",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.43327,
+          14.33302
+        ]
+      },
+      "properties": {
+        "id": "NER-0057",
+        "name": "Ecole Communautaire de Tirmini III",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.96136,
+          13.94323
+        ]
+      },
+      "properties": {
+        "id": "NER-0058",
+        "name": "Lycee de Kantche",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.37397,
+          13.89688
+        ]
+      },
+      "properties": {
+        "id": "NER-0059",
+        "name": "Ecole Franco-Arabe de Droum I",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2138,
+          14.03927
+        ]
+      },
+      "properties": {
+        "id": "NER-0060",
+        "name": "Ecole Primaire de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 4,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.77183,
+          13.90849
+        ]
+      },
+      "properties": {
+        "id": "NER-0061",
+        "name": "Ecole Primaire de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 5,
+        "wind_score": 5,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.09243,
+          13.61185
+        ]
+      },
+      "properties": {
+        "id": "NER-0062",
+        "name": "Medersa de Magaria",
+        "region": "Zinder",
+        "flood_score": 5,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2926,
+          13.82177
+        ]
+      },
+      "properties": {
+        "id": "NER-0063",
+        "name": "CEG de Band\u00e9",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9175,
+          13.74479
+        ]
+      },
+      "properties": {
+        "id": "NER-0064",
+        "name": "Ecole Communautaire de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.54822,
+          13.74125
+        ]
+      },
+      "properties": {
+        "id": "NER-0065",
+        "name": "Complexe Scolaire de Droum I",
+        "region": "Zinder",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.78305,
+          13.56652
+        ]
+      },
+      "properties": {
+        "id": "NER-0066",
+        "name": "CEG de Kantche",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.64204,
+          13.39802
+        ]
+      },
+      "properties": {
+        "id": "NER-0067",
+        "name": "Medersa de Guidimouni",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.25183,
+          13.29376
+        ]
+      },
+      "properties": {
+        "id": "NER-0068",
+        "name": "Medersa de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.89647,
+          13.71117
+        ]
+      },
+      "properties": {
+        "id": "NER-0069",
+        "name": "Ecole Franco-Arabe de Kantche",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 5,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.13702,
+          13.83553
+        ]
+      },
+      "properties": {
+        "id": "NER-0070",
+        "name": "Ecole Communautaire de Kantche",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.23465,
+          13.8639
+        ]
+      },
+      "properties": {
+        "id": "NER-0071",
+        "name": "CEG de Tirmini III",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.57128,
+          13.92121
+        ]
+      },
+      "properties": {
+        "id": "NER-0072",
+        "name": "Ecole Primaire de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.31666,
+          13.98486
+        ]
+      },
+      "properties": {
+        "id": "NER-0073",
+        "name": "Ecole Communautaire de Wacha III",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.22563,
+          13.92961
+        ]
+      },
+      "properties": {
+        "id": "NER-0074",
+        "name": "CEG de Dogo I",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 4,
+        "wind_score": 4,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.0677,
+          13.88557
+        ]
+      },
+      "properties": {
+        "id": "NER-0075",
+        "name": "Ecole Communautaire de Kantche",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.48536,
+          13.88264
+        ]
+      },
+      "properties": {
+        "id": "NER-0076",
+        "name": "Medersa de Band\u00e9",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.12113,
+          13.98676
+        ]
+      },
+      "properties": {
+        "id": "NER-0077",
+        "name": "Ecole Communautaire de Gour\u00e9",
+        "region": "Zinder",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9702,
+          14.34687
+        ]
+      },
+      "properties": {
+        "id": "NER-0078",
+        "name": "Complexe Scolaire de Dan Barto I",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.61834,
+          13.3387
+        ]
+      },
+      "properties": {
+        "id": "NER-0079",
+        "name": "Ecole Franco-Arabe de Kantche",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.09297,
+          13.47618
+        ]
+      },
+      "properties": {
+        "id": "NER-0080",
+        "name": "Complexe Scolaire de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.56028,
+          14.13623
+        ]
+      },
+      "properties": {
+        "id": "NER-0081",
+        "name": "Ecole Communautaire de Dogo A",
+        "region": "Zinder",
+        "flood_score": 5,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.77253,
+          13.88144
+        ]
+      },
+      "properties": {
+        "id": "NER-0082",
+        "name": "CEG de Tirmini",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.06553,
+          13.69277
+        ]
+      },
+      "properties": {
+        "id": "NER-0083",
+        "name": "CEG de Dan Barto",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19346,
+          13.97518
+        ]
+      },
+      "properties": {
+        "id": "NER-0084",
+        "name": "Medersa de Gour\u00e9",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 3,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.94047,
+          13.8831
+        ]
+      },
+      "properties": {
+        "id": "NER-0085",
+        "name": "Ecole Communautaire de Kantche",
+        "region": "Zinder",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.89328,
+          13.69827
+        ]
+      },
+      "properties": {
+        "id": "NER-0086",
+        "name": "Lycee de Mirriah",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.87687,
+          13.69069
+        ]
+      },
+      "properties": {
+        "id": "NER-0087",
+        "name": "Complexe Scolaire de Band\u00e9",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 5,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 4,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.24119,
+          13.84327
+        ]
+      },
+      "properties": {
+        "id": "NER-0088",
+        "name": "Medersa de Matameye",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1108,
+          13.5142
+        ]
+      },
+      "properties": {
+        "id": "NER-0089",
+        "name": "Ecole Communautaire de Band\u00e9",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 5,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.92946,
+          13.92539
+        ]
+      },
+      "properties": {
+        "id": "NER-0090",
+        "name": "Lycee de Kantche A",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.73317,
+          13.59767
+        ]
+      },
+      "properties": {
+        "id": "NER-0091",
+        "name": "Medersa de Band\u00e9",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.34607,
+          13.71464
+        ]
+      },
+      "properties": {
+        "id": "NER-0092",
+        "name": "Medersa de Mirriah",
+        "region": "Zinder",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.30795,
+          13.79476
+        ]
+      },
+      "properties": {
+        "id": "NER-0093",
+        "name": "Ecole Communautaire de Matameye I",
+        "region": "Zinder",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.76231,
+          13.17721
+        ]
+      },
+      "properties": {
+        "id": "NER-0094",
+        "name": "Ecole Franco-Arabe de Magaria",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.40453,
+          14.83083
+        ]
+      },
+      "properties": {
+        "id": "NER-0095",
+        "name": "Ecole Franco-Arabe de Gour\u00e9",
+        "region": "Zinder",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.46428,
+          13.44512
+        ]
+      },
+      "properties": {
+        "id": "NER-0096",
+        "name": "Medersa de Maradaoua",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 4,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.75837,
+          13.26079
+        ]
+      },
+      "properties": {
+        "id": "NER-0097",
+        "name": "Ecole Primaire de Safo",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 4,
+        "drought_score": 0,
+        "landslide_score": 4,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.07785,
+          13.66787
+        ]
+      },
+      "properties": {
+        "id": "NER-0098",
+        "name": "Complexe Scolaire de Mayahi",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.78876,
+          13.5495
+        ]
+      },
+      "properties": {
+        "id": "NER-0099",
+        "name": "CEG de Dakoro",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.75858,
+          13.33529
+        ]
+      },
+      "properties": {
+        "id": "NER-0100",
+        "name": "Ecole Communautaire de Tessaoua",
+        "region": "Maradi",
+        "flood_score": 5,
+        "heat_score": 3,
+        "wind_score": 5,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.84957,
+          13.54828
+        ]
+      },
+      "properties": {
+        "id": "NER-0101",
+        "name": "Complexe Scolaire de Dakoro III",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.89179,
+          13.4311
+        ]
+      },
+      "properties": {
+        "id": "NER-0102",
+        "name": "Complexe Scolaire de Aguie B",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.81641,
+          13.35102
+        ]
+      },
+      "properties": {
+        "id": "NER-0103",
+        "name": "Ecole Primaire de Maradaoua III",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.69468,
+          13.48266
+        ]
+      },
+      "properties": {
+        "id": "NER-0104",
+        "name": "Complexe Scolaire de Aguie",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.87845,
+          13.41667
+        ]
+      },
+      "properties": {
+        "id": "NER-0105",
+        "name": "Ecole Primaire de Bermo",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.21803,
+          13.77717
+        ]
+      },
+      "properties": {
+        "id": "NER-0106",
+        "name": "Complexe Scolaire de Gabi",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.78386,
+          13.05976
+        ]
+      },
+      "properties": {
+        "id": "NER-0107",
+        "name": "Ecole Franco-Arabe de Kornaka",
+        "region": "Maradi",
+        "flood_score": 5,
+        "heat_score": 1,
+        "wind_score": 5,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.34115,
+          13.2878
+        ]
+      },
+      "properties": {
+        "id": "NER-0108",
+        "name": "Ecole Franco-Arabe de Aguie B",
+        "region": "Maradi",
+        "flood_score": 5,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.86686,
+          13.52158
+        ]
+      },
+      "properties": {
+        "id": "NER-0109",
+        "name": "Complexe Scolaire de Aguie",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.10464,
+          13.47524
+        ]
+      },
+      "properties": {
+        "id": "NER-0110",
+        "name": "Complexe Scolaire de Gabi A",
+        "region": "Maradi",
+        "flood_score": 5,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4284,
+          13.95162
+        ]
+      },
+      "properties": {
+        "id": "NER-0111",
+        "name": "CEG de Gabi",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 5,
+        "wind_score": 4,
+        "drought_score": 0,
+        "landslide_score": 5,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.53717,
+          13.47901
+        ]
+      },
+      "properties": {
+        "id": "NER-0112",
+        "name": "Ecole Communautaire de Gabi",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.411,
+          13.93056
+        ]
+      },
+      "properties": {
+        "id": "NER-0113",
+        "name": "Ecole Communautaire de Serkin Yamma",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.85552,
+          13.41566
+        ]
+      },
+      "properties": {
+        "id": "NER-0114",
+        "name": "Lycee de Dan Issa I",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 5,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 3,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.718,
+          13.53689
+        ]
+      },
+      "properties": {
+        "id": "NER-0115",
+        "name": "Complexe Scolaire de Dakoro",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.98505,
+          13.46568
+        ]
+      },
+      "properties": {
+        "id": "NER-0116",
+        "name": "Complexe Scolaire de Gabi",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.98371,
+          13.52266
+        ]
+      },
+      "properties": {
+        "id": "NER-0117",
+        "name": "Ecole Communautaire de Kornaka",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 3,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.45178,
+          13.54976
+        ]
+      },
+      "properties": {
+        "id": "NER-0118",
+        "name": "Medersa de Madarounfa",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9735,
+          13.62554
+        ]
+      },
+      "properties": {
+        "id": "NER-0119",
+        "name": "Complexe Scolaire de Mayahi",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.61948,
+          13.34914
+        ]
+      },
+      "properties": {
+        "id": "NER-0120",
+        "name": "Ecole Primaire de Maradaoua",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.12407,
+          13.67066
+        ]
+      },
+      "properties": {
+        "id": "NER-0121",
+        "name": "Medersa de Tibiri B",
+        "region": "Maradi",
+        "flood_score": 4,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.02973,
+          13.80862
+        ]
+      },
+      "properties": {
+        "id": "NER-0122",
+        "name": "Complexe Scolaire de Gabi",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.84744,
+          13.45705
+        ]
+      },
+      "properties": {
+        "id": "NER-0123",
+        "name": "CEG de Aguie",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.45819,
+          13.39769
+        ]
+      },
+      "properties": {
+        "id": "NER-0124",
+        "name": "Ecole Primaire de Aguie",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.31185,
+          13.87471
+        ]
+      },
+      "properties": {
+        "id": "NER-0125",
+        "name": "Ecole Franco-Arabe de Tibiri",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.90395,
+          13.9014
+        ]
+      },
+      "properties": {
+        "id": "NER-0126",
+        "name": "Ecole Communautaire de Tibiri",
+        "region": "Maradi",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 5,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.61745,
+          13.81784
+        ]
+      },
+      "properties": {
+        "id": "NER-0127",
+        "name": "Ecole Communautaire de Safo",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.61594,
+          13.40813
+        ]
+      },
+      "properties": {
+        "id": "NER-0128",
+        "name": "Ecole Primaire de Safo I",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.80089,
+          13.31183
+        ]
+      },
+      "properties": {
+        "id": "NER-0129",
+        "name": "Ecole Communautaire de Maradaoua B",
+        "region": "Maradi",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 3,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.12761,
+          13.84017
+        ]
+      },
+      "properties": {
+        "id": "NER-0130",
+        "name": "Lycee de Serkin Yamma",
+        "region": "Maradi",
+        "flood_score": 5,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.81797,
+          13.63366
+        ]
+      },
+      "properties": {
+        "id": "NER-0131",
+        "name": "Ecole Communautaire de Maradaoua",
+        "region": "Maradi",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 4,
+        "drought_score": 5,
+        "landslide_score": 3,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.84581,
+          13.42062
+        ]
+      },
+      "properties": {
+        "id": "NER-0132",
+        "name": "Ecole Primaire de Kornaka",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.13973,
+          13.96398
+        ]
+      },
+      "properties": {
+        "id": "NER-0133",
+        "name": "Ecole Communautaire de Kornaka",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 5,
+        "wind_score": 5,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.43781,
+          13.43107
+        ]
+      },
+      "properties": {
+        "id": "NER-0134",
+        "name": "Medersa de Dakoro III",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.06144,
+          13.73803
+        ]
+      },
+      "properties": {
+        "id": "NER-0135",
+        "name": "Medersa de Kornaka A",
+        "region": "Maradi",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.13574,
+          15.01288
+        ]
+      },
+      "properties": {
+        "id": "NER-0136",
+        "name": "Complexe Scolaire de Dogu\u00e9raoua",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 5,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.0894,
+          14.89547
+        ]
+      },
+      "properties": {
+        "id": "NER-0137",
+        "name": "Ecole Communautaire de Keita",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.41901,
+          14.59492
+        ]
+      },
+      "properties": {
+        "id": "NER-0138",
+        "name": "Lycee de Tchintabaraden",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.93897,
+          14.77031
+        ]
+      },
+      "properties": {
+        "id": "NER-0139",
+        "name": "Ecole Communautaire de Keita",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.94507,
+          14.28421
+        ]
+      },
+      "properties": {
+        "id": "NER-0140",
+        "name": "Medersa de Dogu\u00e9raoua",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 3,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.04571,
+          14.48067
+        ]
+      },
+      "properties": {
+        "id": "NER-0141",
+        "name": "Medersa de Abalak",
+        "region": "Tahoua",
+        "flood_score": 4,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.83253,
+          15.43402
+        ]
+      },
+      "properties": {
+        "id": "NER-0142",
+        "name": "Ecole Primaire de Birni N'Konni II",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.1666,
+          15.34042
+        ]
+      },
+      "properties": {
+        "id": "NER-0143",
+        "name": "Ecole Primaire de Tsernaoua",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.69166,
+          14.47931
+        ]
+      },
+      "properties": {
+        "id": "NER-0144",
+        "name": "Ecole Franco-Arabe de Dogu\u00e9raoua II",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.76659,
+          15.00554
+        ]
+      },
+      "properties": {
+        "id": "NER-0145",
+        "name": "Ecole Primaire de Malbaza III",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.70631,
+          14.61464
+        ]
+      },
+      "properties": {
+        "id": "NER-0146",
+        "name": "Complexe Scolaire de Madaoua",
+        "region": "Tahoua",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.75077,
+          14.86524
+        ]
+      },
+      "properties": {
+        "id": "NER-0147",
+        "name": "CEG de Bambeye",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54043,
+          14.90141
+        ]
+      },
+      "properties": {
+        "id": "NER-0148",
+        "name": "Medersa de Tchintabaraden",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54176,
+          15.22699
+        ]
+      },
+      "properties": {
+        "id": "NER-0149",
+        "name": "Ecole Franco-Arabe de Dogu\u00e9raoua",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 0,
+        "landslide_score": 5,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.67219,
+          14.37843
+        ]
+      },
+      "properties": {
+        "id": "NER-0150",
+        "name": "Lycee de Tsernaoua",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.40792,
+          15.05557
+        ]
+      },
+      "properties": {
+        "id": "NER-0151",
+        "name": "CEG de Tsernaoua I",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.2703,
+          14.52954
+        ]
+      },
+      "properties": {
+        "id": "NER-0152",
+        "name": "Ecole Primaire de Keita",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.58229,
+          14.35336
+        ]
+      },
+      "properties": {
+        "id": "NER-0153",
+        "name": "Ecole Primaire de Tchintabaraden",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.83995,
+          15.0577
+        ]
+      },
+      "properties": {
+        "id": "NER-0154",
+        "name": "CEG de Tchintabaraden",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 3,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.41533,
+          14.9723
+        ]
+      },
+      "properties": {
+        "id": "NER-0155",
+        "name": "CEG de Tassara",
+        "region": "Tahoua",
+        "flood_score": 5,
+        "heat_score": 5,
+        "wind_score": 4,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.17326,
+          14.79812
+        ]
+      },
+      "properties": {
+        "id": "NER-0156",
+        "name": "Ecole Franco-Arabe de Keita",
+        "region": "Tahoua",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.76177,
+          14.4757
+        ]
+      },
+      "properties": {
+        "id": "NER-0157",
+        "name": "Ecole Communautaire de Madaoua I",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.95352,
+          14.585
+        ]
+      },
+      "properties": {
+        "id": "NER-0158",
+        "name": "Ecole Franco-Arabe de Ill\u00e9la",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.23463,
+          15.03474
+        ]
+      },
+      "properties": {
+        "id": "NER-0159",
+        "name": "Complexe Scolaire de Bambeye",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.83083,
+          14.77507
+        ]
+      },
+      "properties": {
+        "id": "NER-0160",
+        "name": "Ecole Primaire de Ill\u00e9la",
+        "region": "Tahoua",
+        "flood_score": 4,
+        "heat_score": 5,
+        "wind_score": 4,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 4,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.28171,
+          14.82631
+        ]
+      },
+      "properties": {
+        "id": "NER-0161",
+        "name": "Ecole Primaire de Birni N'Konni I",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.26035,
+          15.26558
+        ]
+      },
+      "properties": {
+        "id": "NER-0162",
+        "name": "Medersa de Bouza",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.93657,
+          14.69978
+        ]
+      },
+      "properties": {
+        "id": "NER-0163",
+        "name": "Ecole Franco-Arabe de Galma",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.9194,
+          14.49636
+        ]
+      },
+      "properties": {
+        "id": "NER-0164",
+        "name": "Ecole Primaire de Abalak",
+        "region": "Tahoua",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.55391,
+          14.63889
+        ]
+      },
+      "properties": {
+        "id": "NER-0165",
+        "name": "CEG de Malbaza",
+        "region": "Tahoua",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 4,
+        "drought_score": 4,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.05428,
+          13.24609
+        ]
+      },
+      "properties": {
+        "id": "NER-0166",
+        "name": "Ecole Franco-Arabe de Falmey I",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.47378,
+          13.16982
+        ]
+      },
+      "properties": {
+        "id": "NER-0167",
+        "name": "Lycee de Dioundiou III",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.77797,
+          12.97295
+        ]
+      },
+      "properties": {
+        "id": "NER-0168",
+        "name": "Ecole Franco-Arabe de Koygolo III",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.75332,
+          12.83731
+        ]
+      },
+      "properties": {
+        "id": "NER-0169",
+        "name": "Complexe Scolaire de Kirtachi",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.97594,
+          13.39621
+        ]
+      },
+      "properties": {
+        "id": "NER-0170",
+        "name": "Ecole Franco-Arabe de Harikanassou",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.25776,
+          13.22396
+        ]
+      },
+      "properties": {
+        "id": "NER-0171",
+        "name": "Lycee de Harikanassou II",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.26904,
+          12.93259
+        ]
+      },
+      "properties": {
+        "id": "NER-0172",
+        "name": "Ecole Communautaire de Harikanassou",
+        "region": "Dosso",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.94641,
+          12.83107
+        ]
+      },
+      "properties": {
+        "id": "NER-0173",
+        "name": "Lycee de Koygolo",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.32093,
+          12.86047
+        ]
+      },
+      "properties": {
+        "id": "NER-0174",
+        "name": "Ecole Primaire de Kirtachi",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.15968,
+          13.16211
+        ]
+      },
+      "properties": {
+        "id": "NER-0175",
+        "name": "CEG de Bana",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.30222,
+          13.21643
+        ]
+      },
+      "properties": {
+        "id": "NER-0176",
+        "name": "CEG de Gaya",
+        "region": "Dosso",
+        "flood_score": 5,
+        "heat_score": 2,
+        "wind_score": 5,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.13475,
+          13.29237
+        ]
+      },
+      "properties": {
+        "id": "NER-0177",
+        "name": "CEG de Mokko",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.83435,
+          12.94485
+        ]
+      },
+      "properties": {
+        "id": "NER-0178",
+        "name": "CEG de Harikanassou",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.05135,
+          12.58955
+        ]
+      },
+      "properties": {
+        "id": "NER-0179",
+        "name": "Medersa de Harikanassou",
+        "region": "Dosso",
+        "flood_score": 5,
+        "heat_score": 3,
+        "wind_score": 5,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.30495,
+          13.14296
+        ]
+      },
+      "properties": {
+        "id": "NER-0180",
+        "name": "Ecole Communautaire de Y\u00e9lou",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1979,
+          13.06132
+        ]
+      },
+      "properties": {
+        "id": "NER-0181",
+        "name": "Ecole Franco-Arabe de Mokko",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.37077,
+          13.03593
+        ]
+      },
+      "properties": {
+        "id": "NER-0182",
+        "name": "Ecole Primaire de Harikanassou",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.45167,
+          12.8876
+        ]
+      },
+      "properties": {
+        "id": "NER-0183",
+        "name": "Ecole Communautaire de Falmey",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.33006,
+          13.22862
+        ]
+      },
+      "properties": {
+        "id": "NER-0184",
+        "name": "Ecole Franco-Arabe de Boboye",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 4,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.36075,
+          13.3518
+        ]
+      },
+      "properties": {
+        "id": "NER-0185",
+        "name": "Ecole Franco-Arabe de Koygolo",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2113,
+          13.09558
+        ]
+      },
+      "properties": {
+        "id": "NER-0186",
+        "name": "CEG de Bana I",
+        "region": "Dosso",
+        "flood_score": 3,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.97203,
+          13.1107
+        ]
+      },
+      "properties": {
+        "id": "NER-0187",
+        "name": "Medersa de Tibiri",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.91877,
+          12.59513
+        ]
+      },
+      "properties": {
+        "id": "NER-0188",
+        "name": "Complexe Scolaire de Koygolo III",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.7271,
+          12.98357
+        ]
+      },
+      "properties": {
+        "id": "NER-0189",
+        "name": "CEG de Gaya",
+        "region": "Dosso",
+        "flood_score": 5,
+        "heat_score": 2,
+        "wind_score": 4,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.13557,
+          13.27934
+        ]
+      },
+      "properties": {
+        "id": "NER-0190",
+        "name": "Medersa de Gaya",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.92146,
+          13.0072
+        ]
+      },
+      "properties": {
+        "id": "NER-0191",
+        "name": "Ecole Communautaire de Tibiri",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.75217,
+          12.83634
+        ]
+      },
+      "properties": {
+        "id": "NER-0192",
+        "name": "Ecole Primaire de Falmey",
+        "region": "Dosso",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 5,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.07189,
+          12.94264
+        ]
+      },
+      "properties": {
+        "id": "NER-0193",
+        "name": "CEG de Koygolo",
+        "region": "Dosso",
+        "flood_score": 4,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.38973,
+          13.42185
+        ]
+      },
+      "properties": {
+        "id": "NER-0194",
+        "name": "Medersa de Gaya A",
+        "region": "Dosso",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 5,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.81501,
+          13.09228
+        ]
+      },
+      "properties": {
+        "id": "NER-0195",
+        "name": "Lycee de Loga",
+        "region": "Dosso",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 3,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.39567,
+          16.87665
+        ]
+      },
+      "properties": {
+        "id": "NER-0196",
+        "name": "Medersa de Arlit",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.12465,
+          17.43556
+        ]
+      },
+      "properties": {
+        "id": "NER-0197",
+        "name": "Complexe Scolaire de Tabelot",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 5,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.39122,
+          16.63691
+        ]
+      },
+      "properties": {
+        "id": "NER-0198",
+        "name": "Ecole Franco-Arabe de Dabaga B",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.82619,
+          17.06697
+        ]
+      },
+      "properties": {
+        "id": "NER-0199",
+        "name": "Ecole Franco-Arabe de Tabelot",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.69726,
+          17.13802
+        ]
+      },
+      "properties": {
+        "id": "NER-0200",
+        "name": "Ecole Franco-Arabe de Gougaram",
+        "region": "Agadez",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.41229,
+          17.17682
+        ]
+      },
+      "properties": {
+        "id": "NER-0201",
+        "name": "Complexe Scolaire de Tabelot",
+        "region": "Agadez",
+        "flood_score": 1,
+        "heat_score": 5,
+        "wind_score": 0,
+        "drought_score": 5,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.72688,
+          16.62708
+        ]
+      },
+      "properties": {
+        "id": "NER-0202",
+        "name": "Lycee de Aderbissinat",
+        "region": "Agadez",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.13732,
+          16.44724
+        ]
+      },
+      "properties": {
+        "id": "NER-0203",
+        "name": "Ecole Communautaire de Timia",
+        "region": "Agadez",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 4,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.75516,
+          17.21403
+        ]
+      },
+      "properties": {
+        "id": "NER-0204",
+        "name": "Ecole Communautaire de Gougaram",
+        "region": "Agadez",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 3,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.72418,
+          18.23144
+        ]
+      },
+      "properties": {
+        "id": "NER-0205",
+        "name": "Medersa de Timia II",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.16761,
+          16.94244
+        ]
+      },
+      "properties": {
+        "id": "NER-0206",
+        "name": "Ecole Franco-Arabe de Arlit I",
+        "region": "Agadez",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 3,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.97157,
+          17.77105
+        ]
+      },
+      "properties": {
+        "id": "NER-0207",
+        "name": "Ecole Primaire de Gougaram",
+        "region": "Agadez",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.47881,
+          18.22676
+        ]
+      },
+      "properties": {
+        "id": "NER-0208",
+        "name": "Lycee de Ingall I",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 5,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.63234,
+          17.02716
+        ]
+      },
+      "properties": {
+        "id": "NER-0209",
+        "name": "CEG de Arlit",
+        "region": "Agadez",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 3,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.84075,
+          17.87414
+        ]
+      },
+      "properties": {
+        "id": "NER-0210",
+        "name": "Lycee de If\u00e9rouane A",
+        "region": "Agadez",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 5,
+        "earthquake_score": 3,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.22243,
+          13.64702
+        ]
+      },
+      "properties": {
+        "id": "NER-0211",
+        "name": "Ecole Communautaire de Kablewa",
+        "region": "Diffa",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 5,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.58784,
+          13.53224
+        ]
+      },
+      "properties": {
+        "id": "NER-0212",
+        "name": "Ecole Franco-Arabe de Tam",
+        "region": "Diffa",
+        "flood_score": 5,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.10855,
+          13.62995
+        ]
+      },
+      "properties": {
+        "id": "NER-0213",
+        "name": "Complexe Scolaire de Kablewa II",
+        "region": "Diffa",
+        "flood_score": 1,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.94375,
+          13.44621
+        ]
+      },
+      "properties": {
+        "id": "NER-0214",
+        "name": "Complexe Scolaire de Nguelb\u00e9li A",
+        "region": "Diffa",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.37205,
+          13.31127
+        ]
+      },
+      "properties": {
+        "id": "NER-0215",
+        "name": "Ecole Franco-Arabe de Nguelb\u00e9li",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.25229,
+          13.70722
+        ]
+      },
+      "properties": {
+        "id": "NER-0216",
+        "name": "Medersa de Toumour",
+        "region": "Diffa",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.71276,
+          13.17784
+        ]
+      },
+      "properties": {
+        "id": "NER-0217",
+        "name": "Lycee de N'Guigmi",
+        "region": "Diffa",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.18649,
+          13.45316
+        ]
+      },
+      "properties": {
+        "id": "NER-0218",
+        "name": "Complexe Scolaire de Bosso",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 4,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.44905,
+          13.49068
+        ]
+      },
+      "properties": {
+        "id": "NER-0219",
+        "name": "Medersa de Bosso B",
+        "region": "Diffa",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 4,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.14717,
+          12.70928
+        ]
+      },
+      "properties": {
+        "id": "NER-0220",
+        "name": "Ecole Franco-Arabe de Bosso",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.76249,
+          13.04178
+        ]
+      },
+      "properties": {
+        "id": "NER-0221",
+        "name": "Ecole Primaire de Kabalewa I",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.99778,
+          13.02369
+        ]
+      },
+      "properties": {
+        "id": "NER-0222",
+        "name": "Medersa de Goudoumaria",
+        "region": "Diffa",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 4,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.87543,
+          13.33517
+        ]
+      },
+      "properties": {
+        "id": "NER-0223",
+        "name": "Complexe Scolaire de Nguelb\u00e9li",
+        "region": "Diffa",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 5,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.80367,
+          13.58116
+        ]
+      },
+      "properties": {
+        "id": "NER-0224",
+        "name": "Ecole Communautaire de Main\u00e9-Soroa",
+        "region": "Diffa",
+        "flood_score": 2,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.39628,
+          13.07796
+        ]
+      },
+      "properties": {
+        "id": "NER-0225",
+        "name": "Complexe Scolaire de Tam",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.45242,
+          13.45199
+        ]
+      },
+      "properties": {
+        "id": "NER-0226",
+        "name": "Medersa de Kablewa",
+        "region": "Diffa",
+        "flood_score": 5,
+        "heat_score": 0,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.33806,
+          13.02262
+        ]
+      },
+      "properties": {
+        "id": "NER-0227",
+        "name": "Ecole Communautaire de Toumour",
+        "region": "Diffa",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 4,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.02863,
+          13.23741
+        ]
+      },
+      "properties": {
+        "id": "NER-0228",
+        "name": "Ecole Primaire de N'Guigmi II",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.53642,
+          13.41134
+        ]
+      },
+      "properties": {
+        "id": "NER-0229",
+        "name": "Ecole Primaire de Bosso",
+        "region": "Diffa",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.6274,
+          12.99502
+        ]
+      },
+      "properties": {
+        "id": "NER-0230",
+        "name": "Ecole Franco-Arabe de N'Guigmi",
+        "region": "Diffa",
+        "flood_score": 2,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.70366,
+          13.62327
+        ]
+      },
+      "properties": {
+        "id": "NER-0231",
+        "name": "Lycee de Bankilar\u00e9 III",
+        "region": "Tillaberi",
+        "flood_score": 4,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.68281,
+          14.87474
+        ]
+      },
+      "properties": {
+        "id": "NER-0232",
+        "name": "Medersa de Ayorou II",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 3,
+        "drought_score": 4,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.63655,
+          14.26883
+        ]
+      },
+      "properties": {
+        "id": "NER-0233",
+        "name": "Ecole Franco-Arabe de Banibangou",
+        "region": "Tillaberi",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.19141,
+          14.41664
+        ]
+      },
+      "properties": {
+        "id": "NER-0234",
+        "name": "Ecole Communautaire de Kollo II",
+        "region": "Tillaberi",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.33644,
+          14.10678
+        ]
+      },
+      "properties": {
+        "id": "NER-0235",
+        "name": "Lycee de Gorouol",
+        "region": "Tillaberi",
+        "flood_score": 3,
+        "heat_score": 2,
+        "wind_score": 3,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.79046,
+          14.26588
+        ]
+      },
+      "properties": {
+        "id": "NER-0236",
+        "name": "Complexe Scolaire de Abala",
+        "region": "Tillaberi",
+        "flood_score": 4,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.12877,
+          14.15559
+        ]
+      },
+      "properties": {
+        "id": "NER-0237",
+        "name": "Medersa de Ayorou II",
+        "region": "Tillaberi",
+        "flood_score": 3,
+        "heat_score": 5,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.71355,
+          14.87247
+        ]
+      },
+      "properties": {
+        "id": "NER-0238",
+        "name": "Lycee de Torodi",
+        "region": "Tillaberi",
+        "flood_score": 5,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.01591,
+          14.55337
+        ]
+      },
+      "properties": {
+        "id": "NER-0239",
+        "name": "Medersa de Filingu\u00e9",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 2,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.25752,
+          14.03969
+        ]
+      },
+      "properties": {
+        "id": "NER-0240",
+        "name": "CEG de Kollo",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.21118,
+          14.12681
+        ]
+      },
+      "properties": {
+        "id": "NER-0241",
+        "name": "Ecole Franco-Arabe de Ayorou B",
+        "region": "Tillaberi",
+        "flood_score": 5,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 3,
+        "earthquake_score": 0,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.05149,
+          13.98931
+        ]
+      },
+      "properties": {
+        "id": "NER-0242",
+        "name": "Ecole Communautaire de Kollo A",
+        "region": "Tillaberi",
+        "flood_score": 3,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.68488,
+          14.34355
+        ]
+      },
+      "properties": {
+        "id": "NER-0243",
+        "name": "Medersa de Sinder",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.89905,
+          13.61652
+        ]
+      },
+      "properties": {
+        "id": "NER-0244",
+        "name": "Medersa de Bankilar\u00e9",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 3,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.64721,
+          14.3073
+        ]
+      },
+      "properties": {
+        "id": "NER-0245",
+        "name": "Ecole Communautaire de Diagourou I",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 0,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.2808,
+          14.34908
+        ]
+      },
+      "properties": {
+        "id": "NER-0246",
+        "name": "Ecole Franco-Arabe de Banibangou B",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 3,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 0,
+        "earthquake_score": 1,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.05686,
+          14.61849
+        ]
+      },
+      "properties": {
+        "id": "NER-0247",
+        "name": "Ecole Franco-Arabe de Kollo",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 2,
+        "wind_score": 1,
+        "drought_score": 1,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.49521,
+          14.20284
+        ]
+      },
+      "properties": {
+        "id": "NER-0248",
+        "name": "Ecole Primaire de Gorouol B",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 5,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 4,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.72483,
+          13.80269
+        ]
+      },
+      "properties": {
+        "id": "NER-0249",
+        "name": "Ecole Communautaire de Ouallam B",
+        "region": "Tillaberi",
+        "flood_score": 2,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 5,
+        "earthquake_score": 2,
+        "max_score": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.17764,
+          14.46185
+        ]
+      },
+      "properties": {
+        "id": "NER-0250",
+        "name": "Complexe Scolaire de Say",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 1,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 4,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.13799,
+          14.09888
+        ]
+      },
+      "properties": {
+        "id": "NER-0251",
+        "name": "Ecole Communautaire de Ayorou I",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.03456,
+          14.67041
+        ]
+      },
+      "properties": {
+        "id": "NER-0252",
+        "name": "Ecole Franco-Arabe de Abala",
+        "region": "Tillaberi",
+        "flood_score": 1,
+        "heat_score": 1,
+        "wind_score": 2,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.41897,
+          14.46834
+        ]
+      },
+      "properties": {
+        "id": "NER-0253",
+        "name": "Ecole Communautaire de Bankilar\u00e9",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 1,
+        "wind_score": 0,
+        "drought_score": 3,
+        "landslide_score": 2,
+        "earthquake_score": 0,
+        "max_score": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.46763,
+          14.4571
+        ]
+      },
+      "properties": {
+        "id": "NER-0254",
+        "name": "CEG de Say",
+        "region": "Tillaberi",
+        "flood_score": 4,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 0,
+        "landslide_score": 3,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.06572,
+          14.82717
+        ]
+      },
+      "properties": {
+        "id": "NER-0255",
+        "name": "Complexe Scolaire de Gorouol II",
+        "region": "Tillaberi",
+        "flood_score": 2,
+        "heat_score": 0,
+        "wind_score": 2,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 2,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.01094,
+          14.97826
+        ]
+      },
+      "properties": {
+        "id": "NER-0256",
+        "name": "Ecole Franco-Arabe de Ayorou",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 0,
+        "drought_score": 2,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.14059,
+          14.21167
+        ]
+      },
+      "properties": {
+        "id": "NER-0257",
+        "name": "Ecole Franco-Arabe de Diagourou",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 0,
+        "wind_score": 0,
+        "drought_score": 1,
+        "landslide_score": 1,
+        "earthquake_score": 0,
+        "max_score": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.69774,
+          14.16448
+        ]
+      },
+      "properties": {
+        "id": "NER-0258",
+        "name": "Medersa de Ouallam A",
+        "region": "Tillaberi",
+        "flood_score": 3,
+        "heat_score": 3,
+        "wind_score": 0,
+        "drought_score": 4,
+        "landslide_score": 0,
+        "earthquake_score": 0,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.42682,
+          14.81178
+        ]
+      },
+      "properties": {
+        "id": "NER-0259",
+        "name": "Ecole Primaire de Abala",
+        "region": "Tillaberi",
+        "flood_score": 2,
+        "heat_score": 4,
+        "wind_score": 1,
+        "drought_score": 3,
+        "landslide_score": 1,
+        "earthquake_score": 1,
+        "max_score": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.81521,
+          14.17668
+        ]
+      },
+      "properties": {
+        "id": "NER-0260",
+        "name": "Lycee de Bankilar\u00e9",
+        "region": "Tillaberi",
+        "flood_score": 0,
+        "heat_score": 2,
+        "wind_score": 2,
+        "drought_score": 2,
+        "landslide_score": 2,
+        "earthquake_score": 1,
+        "max_score": 2
+      }
+    }
+  ]
+}

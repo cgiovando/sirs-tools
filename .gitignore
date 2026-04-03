@@ -1,10 +1,13 @@
 # Data files (don't commit sensitive school data)
 data/
-*.geojson
 *.gpkg
 *.tif
 *.csv
 !data/.gitkeep
+
+# Allow dashboard mock data (no sensitive info)
+!dashboard/data/
+!dashboard/data/*.geojson
 
 # Python
 __pycache__/
