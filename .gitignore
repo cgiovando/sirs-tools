@@ -10,6 +10,14 @@ data/
 !dashboard/data/*.geojson
 !dashboard/data/*.png
 
+# Internal project files (keep local, never commit)
+CLAUDE.md
+AGENTS.md
+PROJECT_NOTES.md
+docs/dashboard-plan.md
+docs/rio-grande-report-summary.md
+docs/globalinfrarisk-reference.md
+
 # Python
 __pycache__/
 *.pyc
