@@ -1,0 +1,28 @@
+# Data files (don't commit sensitive school data)
+data/
+*.geojson
+*.gpkg
+*.tif
+*.csv
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
