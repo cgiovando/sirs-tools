@@ -75,7 +75,7 @@
     .header-right {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
 
     .country-select {
@@ -96,6 +96,20 @@
       color: var(--accent);
       border: 1px solid rgba(74, 144, 217, 0.3);
     }
+
+    .export-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .export-btn:hover { opacity: 0.85; }
 
     /* Layout */
     .main-container {
@@ -246,6 +260,78 @@
       font-size: 12px;
     }
 
+    /* Overlay toggle */
+    .overlay-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+
+    .overlay-toggle-label {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .overlay-slider {
+      position: relative;
+      width: 36px;
+      height: 20px;
+    }
+
+    .overlay-slider input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider-track {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-dark);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .slider-track::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 2px;
+      top: 2px;
+      background: var(--text-secondary);
+      border-radius: 50%;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .overlay-slider input:checked + .slider-track {
+      background: var(--accent);
+    }
+
+    .overlay-slider input:checked + .slider-track::before {
+      transform: translateX(16px);
+      background: white;
+    }
+
+    .overlay-opacity {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0 0;
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .overlay-opacity input[type="range"] {
+      flex: 1;
+      height: 4px;
+      accent-color: var(--accent);
+    }
+
     /* Stats */
     .stat-card {
       background: var(--bg-card);
@@ -293,6 +379,7 @@
       background: var(--bg-panel);
       border-top: 1px solid var(--border-color);
       display: flex;
+      flex-direction: column;
       flex-shrink: 0;
       transition: height 0.3s ease;
       overflow: hidden;
@@ -300,21 +387,6 @@
 
     .bottom-panel.collapsed {
       height: 36px;
-    }
-
-    .panel-toggle {
-      position: absolute;
-      top: -28px;
-      right: 16px;
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-bottom: none;
-      border-radius: 6px 6px 0 0;
-      padding: 4px 12px;
-      color: var(--text-secondary);
-      cursor: pointer;
-      font-size: 12px;
-      z-index: 5;
     }
 
     .panel-section {
@@ -414,7 +486,7 @@
       border-radius: 10px !important;
       padding: 0 !important;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
-      min-width: 240px;
+      min-width: 260px;
     }
 
     .maplibregl-popup-tip {
@@ -438,9 +510,10 @@
       margin-bottom: 2px;
     }
 
-    .popup-region {
+    .popup-meta {
       font-size: 11px;
       color: var(--text-secondary);
+      line-height: 1.5;
     }
 
     .popup-scores {
@@ -558,6 +631,7 @@
       <option value="ghana" disabled>Ghana (coming soon)</option>
       <option value="timor-leste" disabled>Timor-Leste (coming soon)</option>
     </select>
+    <button class="export-btn" onclick="exportReport()">Export Report</button>
     <span class="badge">PROTOTYPE</span>
   </div>
 </div>
@@ -634,6 +708,23 @@
       </label>
     </div>
 
+    <!-- Map overlays -->
+    <div class="sidebar-section">
+      <div class="section-title">Map Overlays</div>
+
+      <div class="overlay-toggle">
+        <span class="overlay-toggle-label">Seismic hazard (GEM)</span>
+        <label class="overlay-slider">
+          <input type="checkbox" id="toggleSeismic" onchange="toggleOverlay('seismic', this.checked)">
+          <span class="slider-track"></span>
+        </label>
+      </div>
+      <div class="overlay-opacity" id="seismicOpacity" style="display:none;">
+        <span>Opacity</span>
+        <input type="range" min="10" max="90" value="50" oninput="setOverlayOpacity('seismic', this.value / 100)">
+      </div>
+    </div>
+
     <!-- Legend -->
     <div class="sidebar-section">
       <div class="section-title">Susceptibility Score</div>
@@ -696,7 +787,7 @@
         World Bank Group
       </div>
       <div style="font-size: 10px; color: var(--text-secondary); margin-top: 8px; opacity: 0.6;">
-        Prototype - Mock data for demonstration only
+        Prototype - Synthetic hazard scores for demonstration
       </div>
     </div>
 
@@ -772,7 +863,18 @@ const COUNTRY_CONFIG = {
   niger: {
     center: [7.5, 14.5],
     zoom: 5.5,
+    name: 'Niger',
     dataUrl: 'data/niger-schools.geojson'
+  }
+};
+
+// Hazard overlay sources
+const OVERLAY_SOURCES = {
+  seismic: {
+    type: 'raster',
+    tiles: ['https://maps.openquake.org/mapproxy/ghm/wmts/seismic-hazard-pga-g/webmercator/{z}/{x}/{y}.png'],
+    tileSize: 256,
+    attribution: 'GEM Global Seismic Hazard Map (CC BY-SA 4.0)'
   }
 };
 
@@ -782,6 +884,7 @@ let map = null;
 let summaryChart = null;
 let displayMode = 'max';
 let bottomPanelOpen = true;
+let currentCountry = 'niger';
 
 // ---- Initialization ----
 async function init() {
@@ -790,19 +893,31 @@ async function init() {
     style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
     center: COUNTRY_CONFIG.niger.center,
     zoom: COUNTRY_CONFIG.niger.zoom,
-    attributionControl: false
+    attributionControl: false,
+    preserveDrawingBuffer: true  // Needed for map canvas export
   });
 
   map.addControl(new maplibregl.NavigationControl(), 'top-right');
   map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
 
   map.on('load', async () => {
+    // Pre-register overlay sources and layers (hidden by default)
+    map.addSource('seismic', OVERLAY_SOURCES.seismic);
+    map.addLayer({
+      id: 'seismic-layer',
+      type: 'raster',
+      source: 'seismic',
+      paint: { 'raster-opacity': 0 },
+      layout: { visibility: 'none' }
+    });
+
     await loadSchoolData('niger');
     document.getElementById('loadingOverlay').classList.add('hidden');
   });
 }
 
 async function loadSchoolData(country) {
+  currentCountry = country;
   const config = COUNTRY_CONFIG[country];
   const response = await fetch(config.dataUrl);
   schoolsData = await response.json();
@@ -822,7 +937,12 @@ async function loadSchoolData(country) {
       type: 'circle',
       source: 'schools',
       paint: {
-        'circle-radius': 7,
+        'circle-radius': [
+          'interpolate', ['linear'], ['zoom'],
+          4, 4,
+          7, 6,
+          10, 9
+        ],
         'circle-color': 'rgba(0,0,0,0.3)',
         'circle-blur': 0.5
       }
@@ -836,12 +956,16 @@ async function loadSchoolData(country) {
       paint: {
         'circle-radius': [
           'interpolate', ['linear'], ['zoom'],
-          4, 3,
-          7, 5,
-          10, 8
+          4, 2.5,
+          7, 4.5,
+          10, 7
         ],
         'circle-color': getColorExpression(),
-        'circle-stroke-width': 1,
+        'circle-stroke-width': [
+          'interpolate', ['linear'], ['zoom'],
+          4, 0.5,
+          8, 1
+        ],
         'circle-stroke-color': 'rgba(255,255,255,0.3)',
         'circle-opacity': 0.9
       }
@@ -872,12 +996,6 @@ async function loadSchoolData(country) {
 // ---- Color expression ----
 function getColorExpression() {
   if (displayMode === 'max') {
-    const selectedHazards = getSelectedHazards();
-    if (selectedHazards.length === 0) {
-      return '#666';
-    }
-    // Use data-driven expression for max score across selected hazards
-    // We calculate it by setting a property, so we recalculate the data
     return [
       'match', ['get', '_display_score'],
       0, SCORE_COLORS[0],
@@ -940,30 +1058,22 @@ function updateDisplay() {
     map.setPaintProperty('schools-layer', 'circle-color', getColorExpression());
   }
 
-  // Update stats
   updateStats(selectedHazards);
-
-  // Update chart
   updateChart(selectedHazards);
-
-  // Update table
   updateTable(selectedHazards);
-
-  // Update hazard counts
   updateHazardCounts();
 }
 
 function updateStats(selectedHazards) {
   const total = schoolsData.features.length;
-  document.getElementById('totalSchools').textContent = total;
+  document.getElementById('totalSchools').textContent = total.toLocaleString();
 
   let atRisk = 0;
   schoolsData.features.forEach(f => {
-    const score = f.properties._display_score;
-    if (score >= 4) atRisk++;
+    if (f.properties._display_score >= 4) atRisk++;
   });
 
-  document.getElementById('atRiskCount').textContent = atRisk;
+  document.getElementById('atRiskCount').textContent = atRisk.toLocaleString();
   document.getElementById('atRiskPct').textContent = Math.round((atRisk / total) * 100) + '%';
 }
 
@@ -974,15 +1084,27 @@ function updateHazardCounts() {
       if (f.properties[`${h.id}_score`] >= 3) exposed++;
     });
     const el = document.getElementById(`count-${h.id}`);
-    if (el) el.textContent = exposed;
+    if (el) el.textContent = exposed.toLocaleString();
   });
+}
+
+// ---- Overlays ----
+function toggleOverlay(id, show) {
+  map.setLayoutProperty(`${id}-layer`, 'visibility', show ? 'visible' : 'none');
+  if (show) {
+    map.setPaintProperty(`${id}-layer`, 'raster-opacity', 0.5);
+  }
+  document.getElementById(`${id}Opacity`).style.display = show ? 'flex' : 'none';
+}
+
+function setOverlayOpacity(id, opacity) {
+  map.setPaintProperty(`${id}-layer`, 'raster-opacity', opacity);
 }
 
 // ---- Chart ----
 function updateChart(selectedHazards) {
   const ctx = document.getElementById('summaryChart').getContext('2d');
 
-  // Build datasets: one per score level (0-5), each with values for every hazard
   const hazardsToShow = displayMode === 'max' ? selectedHazards : HAZARDS.map(h => h.id);
   const labels = hazardsToShow.map(id => HAZARDS.find(h => h.id === id)?.label || id);
 
@@ -1004,9 +1126,7 @@ function updateChart(selectedHazards) {
     });
   }
 
-  if (summaryChart) {
-    summaryChart.destroy();
-  }
+  if (summaryChart) summaryChart.destroy();
 
   summaryChart = new Chart(ctx, {
     type: 'bar',
@@ -1064,20 +1184,16 @@ function updateTable(selectedHazards) {
     const label = HAZARDS.find(h => h.id === hazardId)?.label || hazardId;
     const counts = [0, 0, 0, 0, 0, 0];
     schoolsData.features.forEach(f => {
-      const score = f.properties[`${hazardId}_score`];
-      counts[score]++;
+      counts[f.properties[`${hazardId}_score`]]++;
     });
     const total = counts.reduce((a, b) => a + b, 0);
 
-    html += `<tr>`;
-    html += `<td style="font-weight: 500;">${label}</td>`;
+    html += `<tr><td style="font-weight: 500;">${label}</td>`;
     for (let i = 0; i <= 5; i++) {
-      const pct = Math.round((counts[i] / total) * 100);
       const bg = counts[i] > 0 ? SCORE_COLORS[i] + '22' : 'transparent';
       html += `<td class="score-cell" style="background: ${bg}; color: ${SCORE_COLORS[i]};">${counts[i]}</td>`;
     }
-    html += `<td class="score-cell" style="color: var(--text-secondary);">${total}</td>`;
-    html += `</tr>`;
+    html += `<td class="score-cell" style="color: var(--text-secondary);">${total}</td></tr>`;
   });
 
   tbody.innerHTML = html;
@@ -1100,28 +1216,34 @@ function showPopup(feature) {
           <div class="popup-bar-fill" style="width: ${pct}%; background: ${color};"></div>
         </div>
         <span class="popup-score-val" style="color: ${color};">${score}</span>
-      </div>
-    `;
+      </div>`;
   });
 
   const maxScore = props.max_score;
   const maxColor = SCORE_COLORS[maxScore];
 
+  // Build metadata line from real school properties
+  const metaParts = [];
+  if (props.level) metaParts.push(props.level);
+  if (props.ownership) metaParts.push(props.ownership);
+  metaParts.push(props.region + ' Region');
+  const source = props.osm_id ? 'OSM' : 'Giga';
+
   const html = `
     <div class="popup-header">
-      <div class="popup-name">${props.name}</div>
-      <div class="popup-region">${props.region} Region - ${props.id}</div>
+      <div class="popup-name">${props.name || 'Unnamed school'}</div>
+      <div class="popup-meta">
+        ${metaParts.join(' - ')}<br>
+        Source: ${source} | ${props.id}
+      </div>
     </div>
-    <div class="popup-scores">
-      ${scoresHtml}
-    </div>
+    <div class="popup-scores">${scoresHtml}</div>
     <div class="popup-footer">
       <span class="popup-max-label">Max susceptibility</span>
       <span class="popup-max-badge" style="background: ${maxColor};">${maxScore} - ${SCORE_LABELS[maxScore]}</span>
-    </div>
-  `;
+    </div>`;
 
-  new maplibregl.Popup({ offset: 12, maxWidth: '280px' })
+  new maplibregl.Popup({ offset: 12, maxWidth: '300px' })
     .setLngLat(coords)
     .setHTML(html)
     .addTo(map);
@@ -1143,9 +1265,464 @@ function toggleBottomPanel() {
   bottomPanelOpen = !bottomPanelOpen;
   panel.classList.toggle('collapsed', !bottomPanelOpen);
   icon.innerHTML = bottomPanelOpen ? '&#9660;' : '&#9650;';
-
-  // Resize map
   setTimeout(() => map.resize(), 350);
+}
+
+// ---- Export Report ----
+function exportReport() {
+  if (!schoolsData) return;
+
+  const country = COUNTRY_CONFIG[currentCountry];
+  const total = schoolsData.features.length;
+  const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  // Capture map as image
+  const mapCanvas = map.getCanvas();
+  const mapImage = mapCanvas.toDataURL('image/jpeg', 0.9);
+
+  // Build score distribution data for all hazards
+  const hazardData = HAZARDS.map(h => {
+    const counts = [0, 0, 0, 0, 0, 0];
+    schoolsData.features.forEach(f => {
+      counts[f.properties[`${h.id}_score`]]++;
+    });
+    return { ...h, counts, total: counts.reduce((a, b) => a + b, 0) };
+  });
+
+  // Region breakdown
+  const regionStats = {};
+  schoolsData.features.forEach(f => {
+    const r = f.properties.region;
+    if (!regionStats[r]) regionStats[r] = { count: 0, atRisk: 0 };
+    regionStats[r].count++;
+    if (f.properties.max_score >= 4) regionStats[r].atRisk++;
+  });
+
+  // School type breakdown
+  const levelStats = {};
+  schoolsData.features.forEach(f => {
+    const l = f.properties.level || 'Unknown';
+    if (!levelStats[l]) levelStats[l] = { count: 0, atRisk: 0 };
+    levelStats[l].count++;
+    if (f.properties.max_score >= 4) levelStats[l].atRisk++;
+  });
+
+  // Build hazard summary rows
+  let hazardTableRows = '';
+  hazardData.forEach(h => {
+    hazardTableRows += `<tr>
+      <td style="font-weight:600;">${h.label}</td>`;
+    h.counts.forEach((c, i) => {
+      const pct = ((c / h.total) * 100).toFixed(1);
+      hazardTableRows += `<td style="text-align:center;background:${SCORE_COLORS[i]}15;color:${SCORE_COLORS[i]};font-weight:600;">${c}<br><span style="font-size:10px;font-weight:400;">(${pct}%)</span></td>`;
+    });
+    hazardTableRows += `<td style="text-align:center;font-weight:600;">${h.total}</td></tr>`;
+  });
+
+  // Region rows
+  let regionRows = '';
+  Object.entries(regionStats)
+    .sort((a, b) => b[1].count - a[1].count)
+    .forEach(([name, stats]) => {
+      const pct = ((stats.atRisk / stats.count) * 100).toFixed(1);
+      regionRows += `<tr><td>${name}</td><td style="text-align:center">${stats.count}</td><td style="text-align:center">${stats.atRisk}</td><td style="text-align:center">${pct}%</td></tr>`;
+    });
+
+  // Level rows
+  let levelRows = '';
+  Object.entries(levelStats)
+    .sort((a, b) => b[1].count - a[1].count)
+    .forEach(([name, stats]) => {
+      const pct = ((stats.atRisk / stats.count) * 100).toFixed(1);
+      levelRows += `<tr><td>${name}</td><td style="text-align:center">${stats.count}</td><td style="text-align:center">${stats.atRisk}</td><td style="text-align:center">${pct}%</td></tr>`;
+    });
+
+  // Build chart data for the report (will render in new window)
+  const chartDataJSON = JSON.stringify({
+    labels: hazardData.map(h => h.label),
+    datasets: Array.from({length: 6}, (_, score) => ({
+      label: `${score} - ${SCORE_LABELS[score]}`,
+      data: hazardData.map(h => h.counts[score]),
+      backgroundColor: SCORE_COLORS[score],
+    }))
+  });
+
+  const reportHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIRS Report - ${country.name}</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"><\/script>
+  <style>
+    @page { size: A4; margin: 20mm; }
+    @media print {
+      .no-print { display: none !important; }
+      .page-break { page-break-before: always; }
+      body { font-size: 11px; }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1a1a2e;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      background: white;
+    }
+    .report-header {
+      border-bottom: 3px solid #002244;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .report-header h1 {
+      font-size: 28px;
+      color: #002244;
+      margin-bottom: 4px;
+    }
+    .report-header h2 {
+      font-size: 18px;
+      color: #4a90d9;
+      font-weight: 400;
+    }
+    .report-header .meta {
+      font-size: 12px;
+      color: #666;
+      margin-top: 12px;
+    }
+    .print-bar {
+      background: #002244;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .print-bar button {
+      background: #4a90d9;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .print-bar button:hover { opacity: 0.9; }
+    .print-bar + * { margin-top: 50px; }
+    section { margin-bottom: 32px; }
+    section h3 {
+      font-size: 16px;
+      color: #002244;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .key-stats {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .key-stat {
+      flex: 1;
+      background: #f5f7fa;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid #e2e6ec;
+    }
+    .key-stat .value {
+      font-size: 32px;
+      font-weight: 700;
+      color: #002244;
+    }
+    .key-stat .label {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    .key-stat.warning .value { color: #e85d3a; }
+    .map-img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 8px;
+    }
+    .map-caption {
+      font-size: 11px;
+      color: #888;
+      font-style: italic;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    th {
+      background: #f5f7fa;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #ddd;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #eee;
+    }
+    tr:hover td { background: #fafbfc; }
+    .chart-container {
+      width: 100%;
+      height: 320px;
+      margin: 16px 0;
+    }
+    .legend-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 8px;
+      font-size: 11px;
+    }
+    .legend-inline span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .legend-inline .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .methodology {
+      background: #f5f7fa;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .methodology h4 {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      font-size: 10px;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="print-bar no-print">
+    <span>SIRS Susceptibility Report - ${country.name}</span>
+    <div>
+      <button onclick="window.print()">Print / Save as PDF</button>
+      <button onclick="downloadCSV()" style="margin-left:8px;background:#2d8c3c;">Download CSV</button>
+    </div>
+  </div>
+
+  <div class="report-header">
+    <h1>School Susceptibility Report</h1>
+    <h2>${country.name} - Multi-Hazard Screening</h2>
+    <div class="meta">
+      Generated: ${today} | SIRS Screener - GPSS/GFDRR Safer Schools Program, World Bank Group<br>
+      Data: ${total.toLocaleString()} school locations (source: OpenStreetMap) | Hazard scores: synthetic (prototype)
+    </div>
+  </div>
+
+  <!-- Key stats -->
+  <section>
+    <h3>Overview</h3>
+    <div class="key-stats">
+      <div class="key-stat">
+        <div class="value">${total.toLocaleString()}</div>
+        <div class="label">Schools screened</div>
+      </div>
+      <div class="key-stat">
+        <div class="value">${Object.keys(regionStats).length}</div>
+        <div class="label">Regions covered</div>
+      </div>
+      <div class="key-stat">
+        <div class="value">6</div>
+        <div class="label">Hazards assessed</div>
+      </div>
+      <div class="key-stat warning">
+        <div class="value">${hazardData.reduce((sum, h) => sum + h.counts[4] + h.counts[5], 0).toLocaleString()}</div>
+        <div class="label">High/Very high exposure instances</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section>
+    <h3>Spatial Distribution - Maximum Susceptibility Score</h3>
+    <img class="map-img" src="${mapImage}" alt="School susceptibility map - ${country.name}">
+    <div class="map-caption">Schools colored by maximum susceptibility score across all hazards (0-5 scale)</div>
+    <div class="legend-inline">
+      <span><span class="dot" style="background:#2d8c3c"></span> 0 - No exposure</span>
+      <span><span class="dot" style="background:#7ec87e"></span> 1 - Very low</span>
+      <span><span class="dot" style="background:#f5e642"></span> 2 - Low</span>
+      <span><span class="dot" style="background:#f5a623"></span> 3 - Medium</span>
+      <span><span class="dot" style="background:#e85d3a"></span> 4 - High</span>
+      <span><span class="dot" style="background:#c0392b"></span> 5 - Very high</span>
+    </div>
+  </section>
+
+  <!-- Chart -->
+  <section class="page-break">
+    <h3>Susceptibility Score Distribution by Hazard</h3>
+    <div class="chart-container">
+      <canvas id="reportChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Main table -->
+  <section>
+    <h3>School Counts by Susceptibility Score</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Hazard</th>
+          <th style="text-align:center">0 - None</th>
+          <th style="text-align:center">1 - Very Low</th>
+          <th style="text-align:center">2 - Low</th>
+          <th style="text-align:center">3 - Medium</th>
+          <th style="text-align:center">4 - High</th>
+          <th style="text-align:center">5 - Very High</th>
+          <th style="text-align:center">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${hazardTableRows}
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Region breakdown -->
+  <section>
+    <h3>Regional Breakdown</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th style="text-align:center">Schools</th>
+          <th style="text-align:center">High/Very High (score 4-5)</th>
+          <th style="text-align:center">% at Risk</th>
+        </tr>
+      </thead>
+      <tbody>${regionRows}</tbody>
+    </table>
+  </section>
+
+  <!-- School type breakdown -->
+  <section>
+    <h3>Breakdown by School Level</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th style="text-align:center">Schools</th>
+          <th style="text-align:center">High/Very High (score 4-5)</th>
+          <th style="text-align:center">% at Risk</th>
+        </tr>
+      </thead>
+      <tbody>${levelRows}</tbody>
+    </table>
+  </section>
+
+  <!-- Methodology -->
+  <section>
+    <h3>Methodology</h3>
+    <div class="methodology">
+      <h4>Susceptibility Scoring (0-5 scale)</h4>
+      <p>Each school location is assessed against six natural hazards. Hazard values are extracted at each school's
+      coordinates and classified into a 0-5 susceptibility score using hazard-specific thresholds derived from the
+      GFDRR Roadmap for Safer Schools methodology (Haskoning, 2025).</p>
+      <br>
+      <h4>Hazard Sources</h4>
+      <p>Flood: FATHOM/WRI Aqueduct (1/100yr inundation depth) | Heat: ERA5/WB WBGT (days above 35C) |
+      Wind: Beaufort scale classification | Drought: WRI Aqueduct (water stress ratio) |
+      Landslide: NASA Global Susceptibility Map | Earthquake: GEM Global Seismic Hazard (PGA)</p>
+      <br>
+      <h4>Limitations</h4>
+      <p>This prototype uses synthetic hazard scores for demonstration purposes. School locations are sourced from
+      OpenStreetMap and have not been field-validated. Actual hazard values will be extracted from raster datasets
+      in a subsequent phase.</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    SIRS Screener - School Infrastructure Resilience Scan | GPSS/GFDRR Safer Schools Program | World Bank Group | ${today}
+  </div>
+
+  <script>
+    // Render chart
+    const chartData = ${chartDataJSON};
+    new Chart(document.getElementById('reportChart'), {
+      type: 'bar',
+      data: chartData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { boxWidth: 12, padding: 12, font: { size: 11 } }
+          }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false } },
+          y: {
+            stacked: true,
+            title: { display: true, text: 'Number of schools', font: { size: 12 } }
+          }
+        }
+      }
+    });
+
+    // CSV download
+    function downloadCSV() {
+      const hazards = ${JSON.stringify(HAZARDS.map(h => h.id))};
+      const labels = ${JSON.stringify(HAZARDS.map(h => h.label))};
+      const header = ['School ID', 'Name', 'Region', 'Level', 'Ownership', 'Longitude', 'Latitude',
+        ...labels.map(l => l + ' Score'), 'Max Score'];
+      const rows = ${JSON.stringify(schoolsData.features.map(f => {
+        const p = f.properties;
+        const c = f.geometry.coordinates;
+        return [p.id, p.name || '', p.region, p.level || '', p.ownership || '',
+          c[0], c[1],
+          p.flood_score, p.heat_score, p.wind_score, p.drought_score, p.landslide_score, p.earthquake_score,
+          p.max_score];
+      }))};
+
+      let csv = header.join(',') + '\\n';
+      rows.forEach(r => {
+        csv += r.map(v => typeof v === 'string' && v.includes(',') ? '"' + v + '"' : v).join(',') + '\\n';
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'sirs_${currentCountry}_susceptibility.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  <\/script>
+</body>
+</html>`;
+
+  const reportWindow = window.open('', '_blank');
+  reportWindow.document.write(reportHtml);
+  reportWindow.document.close();
 }
 
 // ---- Start ----
