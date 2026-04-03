@@ -11,7 +11,7 @@
     :root {
       --sidebar-width: 280px;
       --header-height: 56px;
-      --panel-height: 260px;
+      --panel-height: 310px;
       --score-0: #2d8c3c;
       --score-1: #7ec87e;
       --score-2: #f5e642;
@@ -442,7 +442,7 @@
     /* Chart area */
     .chart-container {
       width: 100%;
-      height: calc(var(--panel-height) - 70px);
+      height: calc(var(--panel-height) - 80px);
     }
 
     /* Summary table */
@@ -663,7 +663,7 @@
 
     <!-- Hazard toggles -->
     <div class="sidebar-section">
-      <div class="section-title">Score Filters</div>
+      <div class="section-title">Score Filters <span style="font-weight:400;text-transform:none;letter-spacing:0;opacity:0.7;">(schools with score 3+)</span></div>
 
       <label class="hazard-toggle">
         <input type="checkbox" checked data-hazard="flood" onchange="updateDisplay()">
